@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>gh-releases-page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get the latest release stats like download counts, release dates, author on any GitHub project">
+    <meta name="keywords" content="GitHub, release, download, count">
+    <link rel="icon" href="img/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="third-party/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--<nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=".">-->
+                    <!-- all icons from https://getbootstrap.com/docs/3.3/components/#glyphicons -->
+                    <!--<span class="glyphicon glyphicon-stats"></span>&nbsp;
+                    Releases
+                </a>
+            </div>
+        </div>
+    </nav>-->
+    <div class="container">
+        <div class="row" style="display: none;">
+            <div class="col-md-4 col-md-offset-4">
+                <h1>Enter project details&#8202;...</h1>
+                <div class="form form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" placeholder="user or organization name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="repository" placeholder="repository name">
+                    </div>
+                    <button class="btn btn-primary" id="get-stats-button">Show release statistics!</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="description"><br>
+            <h1>&#8202;得到任何公開Repo的Releases資料&#8202;:</h1>
+            <br><br>
+            <p>
+                <span style="font-size:9em; color:lightgrey" class="glyphicon glyphicon-tag" title="Release Tag"></span>&emsp;&emsp;
+                <span style="font-size:9em; color:lightgrey" class="glyphicon glyphicon-calendar" title="Release Date"></span>&emsp;&emsp;
+                <span style="font-size:9em; color:lightgrey" class="glyphicon glyphicon-user" title="Release Author"></span>&emsp;&emsp;
+                <span style="font-size:9em; color:lightgrey" class="glyphicon glyphicon-download" title="Release Downloads"></span>&emsp;
+                <span style="font-size:1.3em; color:lightgrey"><b>和更多</b></span>
+            </p>
+        </div>
+        <div class="row" id="stats-result">
+        </div>
+        <div id="loader-gif">
+            <img src="img/gif-load.gif">
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            Originally made with <span class="glyphicon glyphicon-heart"></span> by <a href="https://github.com/Somsubhra/github-release-stats" target="_blank">Somsubhra</a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="third-party/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="third-party/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="third-party/typahead/bootstrap3-typeahead.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</html>
